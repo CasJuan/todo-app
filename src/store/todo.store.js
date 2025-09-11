@@ -77,7 +77,7 @@ const deletTodo = (todoId) => {
 }
 
 const deletCompleted = () => {
-    state.todos = state.todos.filter(todo => todo.done);
+    state.todos = state.todos.filter(todo => !todo.done);
     saveStateToLocalStorage();
 }
 
